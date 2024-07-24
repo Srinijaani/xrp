@@ -17,7 +17,6 @@ export const tickerDataCronJob = async (schedule) => {
         try {
             const ticker = await tickerDataCron();
 
-            console.log("+++++", ticker);
             if (ticker?.length > 0) {
                 // delete previousdata
                 await TickerData.deleteMany({});

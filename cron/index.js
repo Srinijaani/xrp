@@ -2,7 +2,7 @@ import { tickerDataCronJob } from "./tasks/tickerData.js";
 
 const runCronJobs = () => {
     // Define the schedules for each job
-    const job1Schedule = '0 0 * * *'; // Every five minutes
+    const job1Schedule = '0 */1 * * *'; // Every one hour
 
     tickerDataCronJob(job1Schedule);
 };
